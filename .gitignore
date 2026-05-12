@@ -1,0 +1,17 @@
+# 编译产物
+/wechattweak
+/wechattweak-arm64
+/wechattweak-amd64
+/dist/
+/bin/
+
+# Go 工具产物
+*.test
+*.out
+coverage.txt
+
+# 编辑器/IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
