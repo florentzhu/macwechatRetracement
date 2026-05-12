@@ -14,7 +14,7 @@ type globalOptions struct {
 }
 
 // 默认远程配置地址
-const defaultConfigURL = "https://raw.githubusercontent.com/sunnyyoung/WeChatTweak/refs/heads/master/config.json"
+const defaultConfigURL = "https://raw.githubusercontent.com/florentzhu/macwechatRetracement/refs/heads/main/config.json"
 
 // NewRootCommand 创建根命令，带 versions / patch 两个子命令。
 func NewRootCommand() *cobra.Command {

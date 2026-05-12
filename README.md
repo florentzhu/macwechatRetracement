@@ -46,7 +46,7 @@ wechattweak patch
 
 # 自定义 WeChat.app 路径与 config 来源（本地或 URL 均可）
 wechattweak patch -a /Applications/WeChat.app -c ./config.json
-wechattweak patch -c https://raw.githubusercontent.com/sunnyyoung/WeChatTweak/refs/heads/master/config.json
+wechattweak patch -c https://raw.githubusercontent.com/florentzhu/macwechatRetracement/refs/heads/main/config.json
 ```
 
 执行 `patch` 时建议先退出 WeChat。如果系统提示「已损坏」或「无法验证开发者」，工具最后会自动 `codesign --force --deep --sign -` 并 `xattr -cr` 清理隔离属性。
