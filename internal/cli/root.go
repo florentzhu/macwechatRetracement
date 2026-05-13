@@ -4,7 +4,7 @@ package cli
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/sunnyyoung/wechattweak/internal/wechat"
+	"github.com/florentzhu/macwechatRetracement/internal/wechat"
 )
 
 // 命令行通用选项

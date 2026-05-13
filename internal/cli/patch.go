@@ -6,9 +6,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/sunnyyoung/wechattweak/internal/config"
-	"github.com/sunnyyoung/wechattweak/internal/patcher"
-	"github.com/sunnyyoung/wechattweak/internal/wechat"
+	"github.com/florentzhu/macwechatRetracement/internal/config"
+	"github.com/florentzhu/macwechatRetracement/internal/patcher"
+	"github.com/florentzhu/macwechatRetracement/internal/wechat"
 )
 
 // ErrUnsupportedVersion 找不到当前 WeChat 版本对应的 patch 配置时返回。

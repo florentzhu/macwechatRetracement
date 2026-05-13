@@ -32,7 +32,7 @@ sudo make install
 也可以直接：
 
 ```bash
-go install github.com/sunnyyoung/wechattweak/cmd/wechattweak@latest
+go install github.com/florentzhu/macwechatRetracement/cmd/wechattweak@latest
 ```
 
 ## 使用

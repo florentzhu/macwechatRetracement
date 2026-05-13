@@ -9,7 +9,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/sunnyyoung/wechattweak/internal/config"
+	"github.com/florentzhu/macwechatRetracement/internal/config"
 )
 
 // Mach-O 与 Fat 头部 magic 常量。

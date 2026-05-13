@@ -1,4 +1,4 @@
-module github.com/sunnyyoung/wechattweak
+module github.com/florentzhu/macwechatRetracement
 
 go 1.22
 
