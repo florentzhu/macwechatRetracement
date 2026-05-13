@@ -12,46 +12,28 @@ A command-line tool for tweaking WeChat on macOS, rewritten in **Go**.
 
 ## 安装
 
-### 方式一：curl 一键安装（推荐）
-
-从 [GitHub Releases](https://github.com/florentzhu/macwechatRetracement/releases) 下载最新的 universal 二进制并安装到 `/usr/local/bin/wechattweak`：
+仅支持 macOS。一行命令安装到 `/usr/local/bin/wechattweak`：
 
 ```bash
-sudo curl -fsSL -o /usr/local/bin/wechattweak \
-  https://github.com/florentzhu/macwechatRetracement/releases/latest/download/wechattweak \
-  && sudo chmod +x /usr/local/bin/wechattweak \
-  && sudo xattr -d com.apple.quarantine /usr/local/bin/wechattweak 2>/dev/null || true
+curl -fsSL https://raw.githubusercontent.com/florentzhu/macwechatRetracement/main/install.sh | sudo bash
+```
+
+可选环境变量：
+
+- `PREFIX` 安装目录，默认 `/usr/local/bin`
+- `VERSION` 指定版本（如 `v0.1.0`），默认 `latest`
+
+例如安装到 `~/bin`、指定版本：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/florentzhu/macwechatRetracement/main/install.sh \
+  | PREFIX="$HOME/bin" VERSION=v0.1.0 bash
 ```
 
 验证：
 
 ```bash
 wechattweak versions
-```
-
-### 方式二：go install
-
-```bash
-go install github.com/florentzhu/macwechatRetracement/cmd/wechattweak@latest
-```
-
-### 方式三：从源码构建
-
-依赖：
-
-- Go 1.22+
-- macOS（运行 patch 需要 `codesign`、`xattr`、`defaults`）
-- 构建 universal binary 需要 `lipo`
-
-```bash
-# 单架构本地构建
-make build
-
-# 构建 arm64 + amd64 universal binary
-make universal
-
-# 安装到 /usr/local/bin/wechattweak（可用 PREFIX 改路径）
-sudo make install
 ```
 
 ## 使用
@@ -81,7 +63,7 @@ wechattweak patch -c https://raw.githubusercontent.com/florentzhu/macwechatRetra
 │   ├── patcher/            # Mach-O 解析与 VA 写入
 │   └── wechat/             # WeChat.app 定位、版本、重签名
 ├── config.json             # 各 WeChat 版本的 patch 数据
-├── Makefile
+├── install.sh              # 一键安装脚本
 └── go.mod
 ```
 
