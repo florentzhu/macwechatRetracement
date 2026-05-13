@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/sunnyyoung/wechattweak/internal/cli"
+	"github.com/florentzhu/macwechatRetracement/internal/cli"
 )
 
 func main() {

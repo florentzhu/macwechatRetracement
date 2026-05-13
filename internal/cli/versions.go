@@ -5,8 +5,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/sunnyyoung/wechattweak/internal/config"
-	"github.com/sunnyyoung/wechattweak/internal/wechat"
+	"github.com/florentzhu/macwechatRetracement/internal/config"
+	"github.com/florentzhu/macwechatRetracement/internal/wechat"
 )
 
 func newVersionsCommand(opts *globalOptions) *cobra.Command {

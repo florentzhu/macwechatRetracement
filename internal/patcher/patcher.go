@@ -9,7 +9,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/sunnyyoung/wechattweak/internal/config"
+	"github.com/florentzhu/macwechatRetracement/internal/config"
 )
 
 // Mach-O 与 Fat 头部 magic 常量。
@@ -23,11 +23,11 @@ const (
 
 // 错误类型
 var (
-	ErrInvalidFile     = errors.New("invalid file")
-	ErrNot64BitMachO   = errors.New("not a 64-bit Mach-O")
-	ErrNoArchMatched   = errors.New("no arch matched")
-	ErrVANotFound      = errors.New("virtual address not found in any segment")
-	ErrEmptyEntries    = errors.New("config has no entries")
+	ErrInvalidFile   = errors.New("invalid file")
+	ErrNot64BitMachO = errors.New("not a 64-bit Mach-O")
+	ErrNoArchMatched = errors.New("no arch matched")
+	ErrVANotFound    = errors.New("virtual address not found in any segment")
+	ErrEmptyEntries  = errors.New("config has no entries")
 )
 
 // Patch 对 binaryPath 指向的 Mach-O 文件按 cfg 中的 entries 执行原地替换。

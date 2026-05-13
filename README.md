@@ -10,7 +10,32 @@ A command-line tool for tweaking WeChat on macOS, rewritten in **Go**.
 - 阻止自动更新
 - 客户端多开
 
-## 构建
+## 安装
+
+### 方式一：curl 一键安装（推荐）
+
+从 [GitHub Releases](https://github.com/florentzhu/macwechatRetracement/releases) 下载最新的 universal 二进制并安装到 `/usr/local/bin/wechattweak`：
+
+```bash
+sudo curl -fsSL -o /usr/local/bin/wechattweak \
+  https://github.com/florentzhu/macwechatRetracement/releases/latest/download/wechattweak \
+  && sudo chmod +x /usr/local/bin/wechattweak \
+  && sudo xattr -d com.apple.quarantine /usr/local/bin/wechattweak 2>/dev/null || true
+```
+
+验证：
+
+```bash
+wechattweak versions
+```
+
+### 方式二：go install
+
+```bash
+go install github.com/florentzhu/macwechatRetracement/cmd/wechattweak@latest
+```
+
+### 方式三：从源码构建
 
 依赖：
 
@@ -27,12 +52,6 @@ make universal
 
 # 安装到 /usr/local/bin/wechattweak（可用 PREFIX 改路径）
 sudo make install
-```
-
-也可以直接：
-
-```bash
-go install github.com/sunnyyoung/wechattweak/cmd/wechattweak@latest
 ```
 
 ## 使用

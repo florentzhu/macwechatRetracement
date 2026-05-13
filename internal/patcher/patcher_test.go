@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/sunnyyoung/wechattweak/internal/config"
+	"github.com/florentzhu/macwechatRetracement/internal/config"
 )
 
 // 构造一个最小可用的 thin Mach-O 64 文件：
